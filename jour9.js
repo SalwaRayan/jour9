@@ -72,7 +72,7 @@ function formatDate(date) {
   console.log(format)
 }
 
-formatDate(new Date("1998-12-23"))
+formatDate(new Date())
 
 console.log("")
 
@@ -91,3 +91,4 @@ function calculateAge(birth) {
 calculateAge(new Date("2002-10-08"))
 
 console.log("")
+
