@@ -51,8 +51,6 @@ console.log("")
 
 // 03 - Format
 
-var date = new Date()
-
 function formatDate(date) {
   var str = "aaaa-mm-jj"
   str = str.replace("aaaa", date.getFullYear())
@@ -67,13 +65,29 @@ function formatDate(date) {
     str = str.replace("jj", date.getDate())
   }
   console.log(str)
-
+  
   var format = str.split("-")
   format = format.reverse()
   format = format.join("/")
   console.log(format)
 }
 
-formatDate(date)
+formatDate(new Date("1998-12-23"))
+
+console.log("")
 
 // 04 - Age
+
+function calculateAge(birth) {
+  var day = new Date()
+  var age = day.getFullYear() - birth.getFullYear()
+  if (day.getMonth() < birth.getMonth() || 
+    (day.getMonth() === birth.getMonth() && day.getDate() < birth.getDate())) {
+      age -= 1
+    }
+  console.log(age)
+}
+
+calculateAge(new Date("2002-10-08"))
+
+console.log("")
